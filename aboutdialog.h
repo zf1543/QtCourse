@@ -1,0 +1,25 @@
+#ifndef ABOUTDIALOG_H
+#define ABOUTDIALOG_H
+
+#include <QDialog>
+
+namespace Ui {
+class AboutDialog;
+}
+
+class AboutDialog : public QDialog
+{
+    Q_OBJECT
+
+public:
+    explicit AboutDialog(QWidget *parent = nullptr);
+    ~AboutDialog();
+
+private slots:
+    void on_btnOK_clicked(); // 绑定“确定”按钮的点击事件
+
+private:
+    Ui::AboutDialog *ui;
+};
+
+#endif // ABOUTDIALOG_H
